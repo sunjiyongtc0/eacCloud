@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eac.bigdata.mapper.GwPingMapper">
+
+
+  <select id="findLimt" parameterType="integer" resultType="com.eac.bigdata.entity.GwPing">
+    select id, access_type_name, alarm_info,
+      city_code, city_name, dest_addr,
+      dest_name, dest_id, district_code,
+      district_name, error_code, host_city,
+      host_ip, host_province, is_alarm,
+      jitter, loid, lost_rate,
+      net_type, operator, pppoe_username,
+      probe_alias, probe_id, probe_ip,
+      probe_name, province_code, province_name,
+      score, rtt, serial_num,
+      task_from, task_id, task_md5,
+      task_param_id, task_param_name, task_type_name,
+      test_time, test_time_d, test_time_h,
+      test_time_m, test_time_w, town_code,
+      town_name, vendor, pc,
+      create_time, test_time_par from gw_ping limit  #{num,jdbcType=BIGINT}
+  </select>
+
+  <select id="findById" parameterType="String" resultType="com.eac.bigdata.entity.GwPing">
+    select id, access_type_name, alarm_info,
+      city_code, city_name, dest_addr,
+      dest_name, dest_id, district_code,
+      district_name, error_code, host_city,
+      host_ip, host_province, is_alarm,
+      jitter, loid, lost_rate,
+      net_type, operator, pppoe_username,
+      probe_alias, probe_id, probe_ip,
+      probe_name, province_code, province_name,
+      score, rtt, serial_num,
+      task_from, task_id, task_md5,
+      task_param_id, task_param_name, task_type_name,
+      test_time, test_time_d, test_time_h,
+      test_time_m, test_time_w, town_code,
+      town_name, vendor, pc,
+      create_time, test_time_par from gw_ping where id=  #{id,jdbcType=VARCHAR}
+  </select>
+</mapper>

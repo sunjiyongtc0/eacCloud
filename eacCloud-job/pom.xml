@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>eacCloud-job</artifactId>
+    <packaging>jar</packaging>
+    <name>eacCloud-job</name>
+    <description>eacCloud job</description>
+
+    <parent>
+        <groupId>com.eac</groupId>
+        <artifactId>eac-cloud</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <properties>
+        <maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
+        <xxl-job.version>2.3.0</xxl-job.version>
+        <maven-compiler-source.version>1.8</maven-compiler-source.version>
+        <maven-compiler-target.version>1.8</maven-compiler-target.version>
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <nacos-api.version>2.0.3</nacos-api.version>
+        <spring-cloud-starter-alibaba-nacos.version>2021.1</spring-cloud-starter-alibaba-nacos.version>
+    </properties>
+
+    <dependencies>
+        <!--xxl job-->
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-job-core</artifactId>
+            <version>${xxl-job.version}</version>
+        </dependency>
+        <!--提供服务发现能力-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>${project.name}-${project.version}</finalName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.plugin.version}</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <overwrite>true</overwrite>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

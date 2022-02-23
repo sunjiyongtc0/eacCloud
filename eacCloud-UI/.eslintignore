@@ -1,0 +1,5 @@
+build/*.js
+src/assets
+src/views/activiti/bpmn-js-properties-panel
+public
+dist

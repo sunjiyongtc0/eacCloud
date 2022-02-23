@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.eac</groupId>
+        <artifactId>eacCloud-common</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>eacCloud-common-log</artifactId>
+    <description>公共工具类日志包</description>
+    <version>1.0.0</version>
+
+
+    <properties>
+        <fastjson.version>1.2.78</fastjson.version>
+        <aspectj.version>1.9.6</aspectj.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.eac</groupId>
+            <artifactId>eacCloud-common-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.eac</groupId>
+            <artifactId>eacCloud-common-security</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

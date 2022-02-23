@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: eac-pro-job
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: native
+  cloud:
+    inetutils:
+      preferred-networks: 192.168.10.174
+    nacos:
+      config:
+        server-addr: 192.168.10.143:8848
+        shared-configs:
+          - data-id: application.yml
+            group: eac
+            refresh: true
+        extension-configs:
+          - data-id: eac-pro-job.yml
+            group: eac
+            refresh: true
+      discovery:
+        server-addr: 192.168.10.143:8848
+  main:
+    allow-bean-definition-overriding: true
+xxl:
+  conf:
+    port: 30035
+    logpath: D://需求文档/快捷临时文件/log
+    logretentiondays: 30
+    appname: eacCloudJob
+    access:
+      token:
+    env: test
+    admin:
+      address: http://192.168.10.143:30051/xxl-job
+#server:
+#  port: 30022
+
