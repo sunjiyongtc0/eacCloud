@@ -1,14 +1,12 @@
 spring:
-  application:
-    name: eac-pro-job
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  application:
+    name: eac-pro-job
   profiles:
     active: native
   cloud:
-    inetutils:
-      preferred-networks: 192.168.10.174
     nacos:
       config:
         server-addr: 192.168.10.143:8848
@@ -17,7 +15,7 @@ spring:
             group: eac
             refresh: true
         extension-configs:
-          - data-id: eac-pro-job.yml
+          - data-id: ${spring.application.name}.yml
             group: eac
             refresh: true
       discovery:

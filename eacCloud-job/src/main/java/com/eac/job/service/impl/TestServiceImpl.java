@@ -18,11 +18,13 @@ import java.util.Map;
 @Service
 public class TestServiceImpl  implements TestService {
 
-//    @Autowired
+    @Autowired
     private TestMapper testMapper;
 
     @Override
     public Map<String, Object> findDatas() {
-        return testMapper.findSysOrgDatas();
+        System.out.println(testMapper.findSysMenuDatas());
+        System.out.println(testMapper.findSysOrgDatas());
+        return null;
     }
 }

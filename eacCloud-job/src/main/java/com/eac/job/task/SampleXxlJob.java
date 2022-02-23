@@ -1,9 +1,11 @@
 package com.eac.job.task;
 
+import com.eac.job.service.TestService;
 import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedInputStream;
@@ -30,13 +32,14 @@ import java.util.concurrent.TimeUnit;
 public class SampleXxlJob {
     private static Logger logger = LoggerFactory.getLogger(SampleXxlJob.class);
 
-
+    @Autowired
+    private TestService testService;
     /**
      * 1、简单任务示例（Bean模式）
      */
     @XxlJob("demoJobHandler")
     public void demoJobHandler() throws Exception {
-        System.out.println("我被执行了！");
+        System.out.println(testService.findDatas()+"=>我被执行了！");
         XxlJobHelper.log("XXL-JOB, Hello World.");
 
         for (int i = 0; i < 5; i++) {

@@ -16,30 +16,91 @@
 
     <properties>
         <maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
-        <xxl-job.version>2.3.0</xxl-job.version>
+        <log4j.version>2.14.1</log4j.version>
+        <logstash-logback-encoder.version>6.6</logstash-logback-encoder.version>
+        <druid-spring-boot-starter.version>1.2.8</druid-spring-boot-starter.version>
+        <nacos-api.version>2.0.3</nacos-api.version>
+        <spring-cloud-starter-alibaba-nacos.version>2021.1</spring-cloud-starter-alibaba-nacos.version>
+        <spring-cloud-starter-oauth2.version>2.2.5.RELEASE</spring-cloud-starter-oauth2.version>
+        <fastjson.version>1.2.78</fastjson.version>
+        <mysql.version>8.0.26</mysql.version>
+        <spring.security.jwt.version>1.1.1.RELEASE</spring.security.jwt.version>
+        <pagehelper-spring-boot-starter.version>1.4.1</pagehelper-spring-boot-starter.version>
+        <mybatis-spring-boot-starter.version>2.2.0</mybatis-spring-boot-starter.version>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
         <maven-compiler-source.version>1.8</maven-compiler-source.version>
         <maven-compiler-target.version>1.8</maven-compiler-target.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
-        <nacos-api.version>2.0.3</nacos-api.version>
-        <spring-cloud-starter-alibaba-nacos.version>2021.1</spring-cloud-starter-alibaba-nacos.version>
+
+        <xxl-job.version>2.3.0</xxl-job.version>
     </properties>
 
     <dependencies>
-        <!--xxl job-->
         <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-core</artifactId>
-            <version>${xxl-job.version}</version>
+            <groupId>com.eac</groupId>
+            <artifactId>eacCloud-common-core</artifactId>
+            <version>1.0.0</version>
         </dependency>
-        <!--提供服务发现能力-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-commons</artifactId>
+            <groupId>com.eac</groupId>
+            <artifactId>eacCloud-common-redis</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.eac</groupId>
+            <artifactId>eacCloud-common-datasource</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper-spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-api</artifactId>
+            <version>${nacos-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>${spring-cloud-starter-alibaba-nacos.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>${spring-cloud-starter-alibaba-nacos.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${commons-beanutils.version}</version>
+        </dependency>
+
+
+
+
+        <!--xxl job-->
+        <dependency>
+        <groupId>com.xuxueli</groupId>
+        <artifactId>xxl-job-core</artifactId>
+        <version>${xxl-job.version}</version>
+        </dependency>
     </dependencies>
+
+
 
     <build>
         <plugins>
@@ -71,3 +132,31 @@
         </plugins>
     </build>
 </project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--xxl job-->
+        <!--<dependency>-->
+            <!--<groupId>com.xuxueli</groupId>-->
+            <!--<artifactId>xxl-job-core</artifactId>-->
+            <!--<version>${xxl-job.version}</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash;提供服务发现能力&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-commons</artifactId>-->
+        <!--</dependency>-->
+
+
