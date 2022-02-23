@@ -1,6 +1,5 @@
 package com.eac.bigdata.service;
 
-import com.eac.bigdata.entity.CPPinfo;
 import com.eac.bigdata.entity.GwPing;
 
 import java.util.List;

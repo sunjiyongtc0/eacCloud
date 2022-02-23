@@ -1,4 +1,9 @@
 spring:
+  boot:
+    admin:
+      client:
+        # Spring Boot Admin Server 地址   http://localhost:8080  可自定义
+        url:  http://localhost:30006
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -35,4 +40,20 @@ xxl:
       address: http://192.168.10.143:30051/xxl-job
 #server:
 #  port: 30022
+
+
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+    logfile:
+      enabled: true
+      external-file: E:/JAVACODE/GitLabCode/eacCloud/log/eac-admin-service.log
+
 

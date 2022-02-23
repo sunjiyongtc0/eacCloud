@@ -35,6 +35,8 @@
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
 
         <xxl-job.version>2.3.0</xxl-job.version>
+
+        <spring-boot-admin.version>2.6.2</spring-boot-admin.version>
     </properties>
 
     <dependencies>
@@ -98,7 +100,26 @@
         <artifactId>xxl-job-core</artifactId>
         <version>${xxl-job.version}</version>
         </dependency>
-    </dependencies>
+
+
+        <!-- SpringBoot admin -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>${spring-boot-admin.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+      </dependencies>
 
 
 

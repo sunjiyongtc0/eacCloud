@@ -79,6 +79,7 @@
         <module>eacCloud-api</module>
         <module>eacCloud-bigdata</module>
         <module>eacCloud-job</module>
+        <module>eacCloud-monitor</module>
     </modules>
 
 </project>

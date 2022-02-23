@@ -1,22 +1,22 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    health:
-      show-details: ALWAYS
+# Tomcat
+server:
+  port: 30006
+
+# Spring
 spring:
+  security:
+    user:
+      name: admin
+      password: 123456
   boot:
     admin:
-      client:
-        # Spring Boot Admin Server 地址   http://localhost:8080  可自定义
-        url:  http://localhost:30006
+      ui:
+        title: eac服务状态监控
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
   application:
-    name: eac-pro-bigdata
+    name: eac-pro-monitor
   profiles:
     active: native
   cloud:
