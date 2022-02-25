@@ -8,9 +8,9 @@
 	</appender>
 
 	<appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>log/eac-admin-service.log</File>
+		<File>log/eacCloud-job.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>log/eac-admin-service-%d{yyyyMMdd}.log</FileNamePattern>
+			<FileNamePattern>log/eacCloud-job-%d{yyyyMMdd}.log</FileNamePattern>
 			<MaxHistory>2</MaxHistory>
 		</rollingPolicy>
 		<encoder>
@@ -20,7 +20,7 @@
 
 
 	<!-- Application Loggers -->
-	<logger name="com.eac.log">
+	<logger name="com.eac.job">
 		<level value="debug" />
 	</logger>
 

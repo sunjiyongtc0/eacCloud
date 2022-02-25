@@ -8,9 +8,9 @@
 	</appender>
 
 	<appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>log/eac-admin-service.log</File>
+		<File>log/eacCloud-admin.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>log/eac-admin-service-%d{yyyyMMdd}.log</FileNamePattern>
+			<FileNamePattern>log/eacCloud-admin-%d{yyyyMMdd}.log</FileNamePattern>
 			<MaxHistory>2</MaxHistory>
 		</rollingPolicy>
 		<encoder>
@@ -28,7 +28,7 @@
 	<logger name="org.apache.http">
 		<level value="error" />
 	</logger>
-	
+
 	<logger name="org.springframework.core">
 		<level value="warn" />
 	</logger>

@@ -47,15 +47,13 @@ public class CaptchaController {
 	 * @param response 响应对象
 	 * @return
 	 */
-	@GetMapping(path = "/generateImageCaptcha")//HttpServletResponse response,@RequestParam(name = "key", required = true) String key
+	@GetMapping(path = "/generateImageCaptcha")
 	public ResponseEntity<Resource> generateImageCaptcha(HttpServletRequest request) {
 		ResponseEntity<Resource> responseEntity = null;
 		try {
 			String key=request.getParameter("key");
+			System.out.println("key==>"+key);
 			String charCaptcha = CaptchaUtils.generateCharCaptcha();
-			//或者获取请求的ip
-//			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//			redisUtils.psetex(ApplicationConstants.CHAR_CAPTCHA_PREFIX + authentication.getName(), charCaptcha);
 			redisUtils.psetex(ApplicationConstants.CHAR_CAPTCHA_PREFIX + key, charCaptcha);
 			byte[] bytes = CaptchaUtils.generateImageCaptcha(charCaptcha);
 			Resource resource = new ByteArrayResource(bytes);

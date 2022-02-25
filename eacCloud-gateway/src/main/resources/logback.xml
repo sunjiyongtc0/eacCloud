@@ -8,9 +8,9 @@
 	</appender>
 
 	<appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>log/mscode-gateway.log</File>
+		<File>log/eacCloud-gateway.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>log/mscode-gateway-%d{yyyyMMdd}.log</FileNamePattern>
+			<FileNamePattern>log/eacCloud-gateway-%d{yyyyMMdd}.log</FileNamePattern>
 			<MaxHistory>2</MaxHistory>
 		</rollingPolicy>
 		<encoder>
